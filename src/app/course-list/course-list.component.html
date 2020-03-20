@@ -1,0 +1,17 @@
+<h1>{{title}} {{courses.length}}</h1>
+
+<input [(ngModel)]="newCourseTitle"/>
+
+<button (click)="createCourse(newCourseTitle)">
+  Create  Course
+</button>
+
+<ul>
+  <li *ngFor=" let course of courses">
+    <button (click)="deleteCourse(course)">Delete</button>
+    <a href="course/{{course._id}}">
+      {{course.title}}
+    </a>
+  </li>
+</ul>
+
