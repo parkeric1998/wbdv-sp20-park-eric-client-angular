@@ -1,0 +1,11 @@
+<h3>{{question.title}}</h3>
+<h3>{{question.question}}</h3>
+<div *ngFor="let choice of question.choices">
+  <input type ="radio"
+         value = "{{choice}}"
+         [(ngModel)]="answer"
+         name = "{{question._id}}"/> {{choice}}
+</div>
+Your answer: {{answer}}
+<br/>
+{{question.correct}}
